@@ -1,0 +1,43 @@
+:root {
+  --primary: #e61e6b;
+  --secondary: #f7e92f;
+  --dark: #202020;
+  --light: #cacaca;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.8s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1600px;
+  font-family: monospace;
+}
+section,
+header,
+footer {
+  padding: 4rem;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1rem;
+}
+/* classes */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex-row {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-column {
+  flex-direction: column;
+}
