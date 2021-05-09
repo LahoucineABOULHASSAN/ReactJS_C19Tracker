@@ -1,13 +1,30 @@
 import Result from "../components/Result";
-
-const Global = () => {
+const Global = ({ global }) => {
   return (
     <section className="flex flex-column">
-      <h2>Global Results</h2>
-      <p>{new Date().toDateString()}</p>
+      <h2>World Covid 19 today results</h2>
       <div className="boxs flex flex-row">
-        <Result result={{ title: "Cases", numbers: 33333, global: 1000000 }} />
-        <Result result={{ title: "Deaths", numbers: 22222, global: 300000 }} />
+        <Result
+          result={{
+            title: "Recovers",
+            numbers: global.NewRecovered,
+            global: global.TotalRecovered,
+          }}
+        />
+        <Result
+          result={{
+            title: "Cases",
+            numbers: global.NewConfirmed,
+            global: global.TotalConfirmed,
+          }}
+        />
+        <Result
+          result={{
+            title: "Deaths",
+            numbers: global.NewDeaths,
+            global: global.TotalDeaths,
+          }}
+        />
       </div>
     </section>
   );
