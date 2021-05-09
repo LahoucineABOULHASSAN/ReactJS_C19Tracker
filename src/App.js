@@ -1,14 +1,20 @@
 import "./App.css";
-import Footer from "./components/Footer";
+import Main from "./components/Main";
 import Header from "./components/Header";
-import Global from "./pages/Global";
+import Footer from "./components/Footer";
+import ErrorsContextProvider from "./contexts/ErrorsContext";
+import GlobalContextProvider from "./contexts/GlobalContext";
 
 function App() {
   return (
     <div className="App flex flex-column">
-      <Header />
-      <Global />
-      <Footer />
+      <GlobalContextProvider>
+        <ErrorsContextProvider>
+          <Header />
+          <Main />
+          <Footer />
+        </ErrorsContextProvider>
+      </GlobalContextProvider>
     </div>
   );
 }
