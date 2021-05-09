@@ -1,6 +1,8 @@
 :root {
   --primary: #e61e6b;
   --secondary: #f7e92f;
+  --red: #fc7eaed2;
+  --yellow: #fcf486a9;
   --dark: #202020;
   --light: #cacaca;
 }
@@ -17,10 +19,23 @@ body {
   max-width: 1600px;
   font-family: monospace;
 }
+/* App */
+.App {
+  height: 100vh;
+  background: var(--light);
+}
 section,
 header,
 footer {
+  width: 100%;
+  height: auto;
   padding: 4rem;
+}
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
 }
 a {
   text-decoration: none;
@@ -40,4 +55,5 @@ p {
 }
 .flex-column {
   flex-direction: column;
+  justify-content: space-between;
 }
