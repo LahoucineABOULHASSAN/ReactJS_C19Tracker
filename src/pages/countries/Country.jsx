@@ -1,39 +1,25 @@
 const Country = ({ country }) => {
   return (
-    <table className="country">
-      <thead>
-        <h3> {country.Country} </h3>
-      </thead>
-      <tbody>
-        <tr className="flex flex-row">
-          <td className="flex">Recovers</td>
-          <td className="flex">Cases</td>
-          <td className="flex">Deaths</td>
-        </tr>
-        <tr className="flex flex-row">
-          <td className="flex">
-            <span>New:</span> <span>{country.NewConfirmed}</span>{" "}
-          </td>
-          <td className="flex">
-            <span>New:</span> <span>{country.NewRecovered}</span>{" "}
-          </td>
-          <td className="flex">
-            <span>New:</span> <span>{country.NewDeaths}</span>{" "}
-          </td>
-        </tr>
-        <tr className="flex flex-row">
-          <td className="flex">
-            <span>Global:</span> <span>{country.TotalConfirmed}</span>{" "}
-          </td>
-          <td className="flex">
-            <span>Global:</span> <span>{country.TotalRecovered}</span>{" "}
-          </td>
-          <td className="flex">
-            <span>Global:</span> <span>{country.TotalDeaths}</span>{" "}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="country flex flex-column">
+      <h3>{country.Country}</h3>
+      <div className="grid grid-3">
+        <div className="col">
+          <h3>Recovers</h3>
+          <p>{country.NewRecovered}</p>
+          <p>{country.TotalRecovered}</p>
+        </div>
+        <div className="col">
+          <h3>Cases</h3>
+          <p>{country.NewConfirmed}</p>
+          <p>{country.TotalConfirmed}</p>
+        </div>
+        <div className="col">
+          <h3>Deaths</h3>
+          <p>{country.NewDeaths}</p>
+          <p>{country.TotalDeaths}</p>
+        </div>
+      </div>
+    </div>
   );
 };
 

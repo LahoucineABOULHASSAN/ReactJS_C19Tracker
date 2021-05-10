@@ -44,6 +44,13 @@ p {
   font-size: 1rem;
 }
 /* classes */
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
 .flex {
   display: flex;
   flex-wrap: wrap;

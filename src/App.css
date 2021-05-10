@@ -29,7 +29,6 @@ section .box:nth-of-type(6n + 2) {
 section .box:nth-of-type(6n + 3) {
   background: var(--red);
 }
-
 section .box span,
 section .box h3 {
   font-weight: bold;
@@ -45,28 +44,48 @@ section .countries {
   margin: 1rem auto;
 }
 section .country {
-  width: 100%;
   padding: 1rem;
+  border-radius: 15px;
   margin-bottom: 0.5rem;
 }
-section .country tr:first-child td {
-  font-weight: bold;
-  font-size: 1rem;
+section .country .grid {
+  grid-gap: 0.2rem;
 }
-section .country tr {
-  width: 80%;
-  margin: 0.5rem auto;
+section .country .col {
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
 }
-section .country td {
-  justify-content: space-around;
-  width: 33%;
-  margin: 0 auto;
+section .country .col:nth-of-type(6n + 1) h3 {
+  color: var(--green);
+}
+section .country .col:nth-of-type(6n + 2) h3 {
+  color: var(--yellow);
+}
+section .country .col:nth-of-type(6n + 3) h3 {
+  color: var(--red);
+}
+section .country .col:nth-of-type(6n + 1) p {
+  background: var(--green);
+}
+section .country .col:nth-of-type(6n + 2) p {
+  background: var(--yellow);
+}
+section .country .col:nth-of-type(6n + 3) p {
+  background: var(--red);
+}
+section .country .col h3 {
+  text-shadow: 0 0 1px var(--dark);
+}
+section .country .col p {
+  padding: 3px 0;
+  border-radius: 5px;
 }
 section .country:nth-child(odd) {
-  background: #f3f3f3;
+  border: 2px solid #f3f3f3;
 }
 section .country:nth-child(even) {
-  background: #7a7a7a;
+  border: 2px solid #7a7a7a;
 }
 /* Footer */
 footer {
