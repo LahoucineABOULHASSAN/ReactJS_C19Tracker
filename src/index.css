@@ -18,8 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  max-width: 1600px;
   font-family: monospace;
+}
+main {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 /* App */
 .App {
@@ -67,4 +70,7 @@ p {
 .flex-column {
   flex-direction: column;
   justify-content: space-between;
+}
+.unhide {
+  display: none;
 }
