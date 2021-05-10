@@ -39,6 +39,35 @@ section .box h3 {
 section .box * {
   margin-bottom: 1rem;
 }
+/* countries */
+section .countries {
+  width: 90%;
+  margin: 1rem auto;
+}
+section .country {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+section .country tr:first-child td {
+  font-weight: bold;
+  font-size: 1rem;
+}
+section .country tr {
+  width: 80%;
+  margin: 0.5rem auto;
+}
+section .country td {
+  justify-content: space-around;
+  width: 33%;
+  margin: 0 auto;
+}
+section .country:nth-child(odd) {
+  background: #f3f3f3;
+}
+section .country:nth-child(even) {
+  background: #7a7a7a;
+}
 /* Footer */
 footer {
   background: var(--dark);
