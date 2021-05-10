@@ -1,9 +1,11 @@
 import { useEffect, useCallback, useContext } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { ErrorsContext } from "../contexts/ErrorsContext";
 import Global from "../pages/Global";
 import Countries from "../pages/Countries";
 import Axios from "axios";
+import Nav from "./Nav";
 const Main = () => {
   const { global, setGlobal, countries, setCountries } = useContext(
     GlobalContext
@@ -36,16 +38,27 @@ const Main = () => {
     []
   );
   return (
-    <main>
-      {global.Date && <Global global={global} />}
-      {countries.length && (
-        <Countries
-          countries={countries
-            .sort((a, b) => b.NewConfirmed - a.NewConfirmed)
-            .slice(0, 9)}
-        />
-      )}
-    </main>
+    <Router>
+      <main>
+        <Nav />
+        <Switch>
+          {global.Date && (
+            <Route exact path="/" component={Global}>
+              <Global global={global} />
+            </Route>
+          )}
+          {countries.length && (
+            <Route path="/countries" component={Countries}>
+              <Countries
+                countries={countries.sort(
+                  (a, b) => b.NewConfirmed - a.NewConfirmed
+                )}
+              />
+            </Route>
+          )}
+        </Switch>
+      </main>
+    </Router>
   );
 };
 
