@@ -114,7 +114,23 @@ footer span a {
 }
 
 /* Media Queries */
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 1620px) {
+  #countries .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  main {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1120px) {
+  #countries .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  #countries .search {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
   #global .grid-3 {
     grid-template-columns: 1fr;
   }

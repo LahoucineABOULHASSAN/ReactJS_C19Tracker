@@ -36,7 +36,7 @@ const Main = () => {
     []
   );
   return (
-    <>
+    <main>
       {global.Date && <Global global={global} />}
       {countries.length && (
         <Countries
@@ -45,7 +45,7 @@ const Main = () => {
             .slice(0, 9)}
         />
       )}
-    </>
+    </main>
   );
 };
 
