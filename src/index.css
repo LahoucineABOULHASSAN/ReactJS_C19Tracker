@@ -1,6 +1,6 @@
 :root {
   --primary: #fcb742;
-  --secondary: #7bd1b8;
+  --secondary: #008a63;
   --green: #7efcbdd2;
   --red: #fc7eaed2;
   --blue: #08aac7;
@@ -20,8 +20,13 @@ html {
 body {
   font-family: monospace;
 }
+.App {
+  min-height: 100vh;
+  height: auto;
+}
 main {
   max-width: 1920px;
+  width: 80%;
   margin: 0 auto;
 }
 /* App */
