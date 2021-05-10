@@ -3,6 +3,7 @@
   --secondary: #7bd1b8;
   --green: #7efcbdd2;
   --red: #fc7eaed2;
+  --blue: #08aac7;
   --yellow: #fcf486a9;
   --dark: #202020;
   --light: #cacaca;
@@ -50,6 +51,9 @@ p {
 }
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 .flex {
   display: flex;

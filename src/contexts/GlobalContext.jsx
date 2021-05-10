@@ -3,6 +3,7 @@ export const GlobalContext = createContext();
 const GlobalContextProvider = (props) => {
   const [global, setGlobal] = useState([]);
   const [countries, setCountries] = useState([]);
+  const [search, setSearch] = useState([]);
   return (
     <GlobalContext.Provider
       value={{
@@ -10,6 +11,8 @@ const GlobalContextProvider = (props) => {
         setGlobal,
         countries,
         setCountries,
+        search,
+        setSearch,
       }}
     >
       {props.children}

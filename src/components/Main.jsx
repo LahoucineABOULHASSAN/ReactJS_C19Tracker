@@ -38,7 +38,13 @@ const Main = () => {
   return (
     <>
       {global.Date && <Global global={global} />}
-      {countries.length && <Countries countries={countries.slice(0, 10)} />}
+      {countries.length && (
+        <Countries
+          countries={countries
+            .sort((a, b) => b.NewConfirmed - a.NewConfirmed)
+            .slice(0, 9)}
+        />
+      )}
     </>
   );
 };
