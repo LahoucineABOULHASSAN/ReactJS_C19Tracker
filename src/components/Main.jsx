@@ -6,11 +6,13 @@ import Global from "../pages/Global";
 import Countries from "../pages/Countries";
 import Axios from "axios";
 import Nav from "./Nav";
+import Loading from "./Loading";
+import Error from "./Error";
 const Main = () => {
   const { global, setGlobal, countries, setCountries } = useContext(
     GlobalContext
   );
-  const { setErrors } = useContext(ErrorsContext);
+  const { errors, setErrors } = useContext(ErrorsContext);
   const fetchResults = useCallback(() => {
     const url = "https://api.covid19api.com/summary";
     const fetchData = async () => {
@@ -31,6 +33,35 @@ const Main = () => {
     };
     fetchData();
   }, [setGlobal, setCountries, setErrors]);
+
+  const renderGlobal = () => {
+    if (global.Date) {
+      return (
+        <Route exact path="/" component={Global}>
+          <Global global={global} />
+        </Route>
+      );
+    } else if (!errors) {
+      return <Loading />;
+    }
+    if (errors) return <Error error={errors} />;
+  };
+  const renderCountries = () => {
+    if (countries.length) {
+      return (
+        <Route path="/countries" component={Countries}>
+          <Countries
+            countries={countries.sort(
+              (a, b) => b.NewConfirmed - a.NewConfirmed
+            )}
+          />
+        </Route>
+      );
+    } else if (!errors) {
+      return <Loading />;
+    }
+    if (errors) return <Error error={errors} />;
+  };
   useEffect(
     () => {
       fetchResults();
@@ -42,20 +73,8 @@ const Main = () => {
       <main>
         <Nav />
         <Switch>
-          {global.Date && (
-            <Route exact path="/" component={Global}>
-              <Global global={global} />
-            </Route>
-          )}
-          {countries.length && (
-            <Route path="/countries" component={Countries}>
-              <Countries
-                countries={countries.sort(
-                  (a, b) => b.NewConfirmed - a.NewConfirmed
-                )}
-              />
-            </Route>
-          )}
+          {renderGlobal()}
+          {renderCountries()}
         </Switch>
       </main>
     </Router>
