@@ -11,7 +11,7 @@ const Footer = () => {
         Copyright &copy; {new Date().getFullYear()} ||
         <span>
           <a
-            href="https://vueportfolioapp.netlify.app"
+            href="https://aboulhassan.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >

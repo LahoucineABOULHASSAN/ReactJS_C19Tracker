@@ -16,7 +16,7 @@ it is required so you can use npm to install the depandencies of this project vi
 
 # links
 
-[my portfolio](https://vueportfolioapp.netlify.app).
+[my portfolio](https://aboulhassan.netlify.app/).
 [my github](https://github.com/LahoucineABOULHASSAN).
 [covid19api](https://covid19api.com).
 
