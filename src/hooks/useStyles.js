@@ -12,6 +12,11 @@ export const useStyles = makeStyles((theme) => {
       wordSpacing: 5,
       letterSpacing: 5,
     },
+    link: {
+      textTransform: "capitalize",
+      wordSpacing: 5,
+      letterSpacing: 5,
+    },
     spacing: {
       padding: theme.spacing(1),
     },

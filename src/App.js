@@ -10,7 +10,9 @@ import { red, deepPurple } from "@material-ui/core/colors";
 function App() {
   const theme = createTheme({
     palette: {
-      primary: deepPurple,
+      primary: {
+        main: deepPurple[300],
+      },
       secondary: red,
     },
     typography: {
