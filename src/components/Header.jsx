@@ -1,10 +1,28 @@
+import { Container, Typography } from "@material-ui/core";
+import { cyan } from "@material-ui/core/colors";
+import { useStyles } from "../hooks/useStyles";
+
 const Header = () => {
+  const classes = useStyles();
   return (
-    <header className="flex flex-column">
-      <h1>C19Tracker</h1>
-      <p>Stay home, Stay safe</p>
-      <p>{new Date().toDateString()}</p>
-    </header>
+    <Container className={classes.container}>
+      <Typography
+        className={classes.spacing + " " + classes.header}
+        variant="h3"
+        component="h1"
+        color="primary"
+        align="center"
+      >
+        C19 Tracker
+      </Typography>
+      <Typography className={classes.spacing} align="center" variant="h6">
+        Stay home, Stay safe
+      </Typography>
+
+      <Typography className={classes.spacing} align="center">
+        {new Date().toDateString()}
+      </Typography>
+    </Container>
   );
 };
 
