@@ -29,7 +29,7 @@ const Nav = () => {
   };
 
   return (
-    <Paper square className={classes.tab}>
+    <Paper square className={classes.tab} elevation={0}>
       <Tabs
         centered
         value={value}

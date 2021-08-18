@@ -7,6 +7,10 @@ export const useStyles = makeStyles((theme) => {
       padding: "2rem",
       background: grey[900],
     },
+    mainContent: {
+      width: "100%",
+      padding: "0 4rem",
+    },
     header: {
       textTransform: "uppercase",
       wordSpacing: 5,
@@ -14,7 +18,8 @@ export const useStyles = makeStyles((theme) => {
     },
     tab: {
       maxWidth: 500,
-      margin: "1rem auto",
+      margin: "0.5rem auto",
+      marginBottom: "2rem",
     },
     tabLink: {
       textTransform: "capitalize",

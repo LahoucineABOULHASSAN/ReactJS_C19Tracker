@@ -1,17 +1,20 @@
-import { Typography, Link } from "@material-ui/core";
+import { Container, Typography, Link } from "@material-ui/core";
 import { useStyles } from "../hooks/useStyles";
 
 const Footer = () => {
   const classes = useStyles();
   return (
-    <footer className="flex flex-column">
-      <Typography className={classes.link}>
+    <Container className={classes.container}>
+      <Typography className={classes.link} align="center">
         API from{" "}
         <Link href="https://covid19api.com" target="_blank" rel="noreferrer">
           covid19api.com
         </Link>
       </Typography>
-      <Typography className={classes.spacing + " " + classes.link}>
+      <Typography
+        className={classes.spacing + " " + classes.link}
+        align="center"
+      >
         Copyright &copy; {new Date().getFullYear()}
         <span> || </span>
         <strong>
@@ -24,7 +27,7 @@ const Footer = () => {
           </Link>
         </strong>
       </Typography>
-    </footer>
+    </Container>
   );
 };
 
