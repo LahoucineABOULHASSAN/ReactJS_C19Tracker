@@ -12,6 +12,17 @@ export const useStyles = makeStyles((theme) => {
       wordSpacing: 5,
       letterSpacing: 5,
     },
+    tab: {
+      maxWidth: 500,
+      margin: "1rem auto",
+    },
+    tabLink: {
+      textTransform: "capitalize",
+      fontSize: "18px",
+      wordSpacing: 3,
+      letterSpacing: 2,
+      margin: "0 0.5rem",
+    },
     link: {
       textTransform: "capitalize",
       wordSpacing: 5,

@@ -33,9 +33,6 @@ main {
   margin: 0 auto;
 }
 /* App */
-.App {
-  background: var(--light);
-}
 section,
 header,
 footer {
