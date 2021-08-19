@@ -30,17 +30,38 @@ export const useStyles = makeStyles((theme) => {
       wordSpacing: 3,
       letterSpacing: 2,
       margin: "0 0.5rem",
+      display: "flex",
+      alignItems: "center",
     },
     link: {
       textTransform: "capitalize",
       wordSpacing: 5,
       letterSpacing: 5,
     },
+    form: {
+      display: "flex",
+      alignItems: "center",
+      minWidth: 400,
+      width: "75%",
+      margin: "0 auto",
+    },
+    iconButton: {
+      padding: 10,
+    },
+    input: {
+      flex: 1,
+    },
     spacing: {
       padding: theme.spacing(1),
     },
     marginingB: {
       marginBottom: "0.75rem",
+    },
+    small: {
+      marginRight: "1rem",
+      fontSize: "18px",
+      width: theme.spacing(5),
+      height: theme.spacing(4),
     },
   };
 });

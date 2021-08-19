@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Grid,
+  Avatar,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStyles } from "../../hooks/useStyles";
@@ -84,12 +85,15 @@ const Country = ({ country }) => {
   );
 
   return (
-    <Accordion>
+    <Accordion className="elem-country">
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
+        <Avatar variant="square" className={classes.small + " avatar-country"}>
+          {country.CountryCode}
+        </Avatar>
         <Typography variant="h6" className={classes.tabLink} color="secondary">
           {country.Country}
         </Typography>

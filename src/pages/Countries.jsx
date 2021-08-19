@@ -36,8 +36,9 @@ const Countries = ({ countries }) => {
           .filter((country) => {
             return country.Country.toLowerCase().includes(search);
           })
-          .map((country) => <Country key={country.ID} country={country} />)
-          .slice(0, 9)}
+          .map((country) => (
+            <Country key={country.ID} country={country} />
+          ))}
       </div>
     </Container>
   );
