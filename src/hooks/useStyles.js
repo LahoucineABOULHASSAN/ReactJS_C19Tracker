@@ -21,6 +21,9 @@ export const useStyles = makeStyles((theme) => {
       margin: "0.5rem auto",
       marginBottom: "2rem",
     },
+    countries: {
+      margin: "2rem 0",
+    },
     tabLink: {
       textTransform: "capitalize",
       fontSize: "18px",
@@ -35,6 +38,9 @@ export const useStyles = makeStyles((theme) => {
     },
     spacing: {
       padding: theme.spacing(1),
+    },
+    marginingB: {
+      marginBottom: "0.75rem",
     },
   };
 });

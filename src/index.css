@@ -31,7 +31,17 @@ main {
   padding: 1rem 0 4rem 0;
   margin: 0 auto;
 }
-
+.unhide {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  span.unhide {
+    display: block;
+  }
+  .unhide-2 {
+    display: none;
+  }
+}
 /* Loading Styling */
 .loading {
   display: flex;

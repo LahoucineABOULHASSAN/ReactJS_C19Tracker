@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { useStyles } from "../hooks/useStyles";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import PublicIcon from "@material-ui/icons/Public";
 import HomeIcon from "@material-ui/icons/Home";
+import { useEffect } from "react";
 const Nav = () => {
   const [value, setValue] = useState(0);
 
   const history = useHistory();
+  const location = useLocation();
   const classes = useStyles();
   const menu = [
     {
@@ -26,8 +28,12 @@ const Nav = () => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    console.log(newValue);
   };
-
+  useEffect(
+    () => setValue(location.pathname === "/" ? 0 : 1),
+    [location.pathname]
+  );
   return (
     <Paper square className={classes.tab} elevation={0}>
       <Tabs
