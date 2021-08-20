@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
 
-:root {
-  --primary: #fcb742;
-  --secondary: #008a63;
-  --green: #7efcbdd2;
-  --red: #fc7eaed2;
-  --blue: #08aac7;
-  --yellow: #fcf486a9;
-  --dark: #202020;
-  --light: #cacaca;
-}
 * {
   margin: 0;
   padding: 0;
@@ -66,63 +56,4 @@ main {
   .unhide-2 {
     display: none;
   }
-}
-/* Loading Styling */
-.loading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  padding: 1rem;
-  margin: 4rem auto;
-}
-.loading h2 {
-  margin-bottom: 2rem;
-}
-.loader {
-  border: 5px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 5px solid var(--dark);
-  width: 70px;
-  height: 70px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 3s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Error styling */
-#error {
-  width: 80%;
-  margin: 4rem auto;
-  text-align: center;
-}
-#error h1 {
-  font-size: 2rem;
-  word-spacing: 15px;
-  letter-spacing: 3px;
-  margin-bottom: 2rem;
-}
-.error {
-  padding: 2rem;
-  font-size: 1.3rem;
-  border-radius: 15px;
-  background: #e28c9cbf;
 }
