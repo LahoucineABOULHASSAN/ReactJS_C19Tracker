@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useStyles } from "../hooks/useStyles";
+import { Paper, Tabs, Tab } from "@material-ui/core";
 import { useHistory, useLocation } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+
 import PublicIcon from "@material-ui/icons/Public";
 import HomeIcon from "@material-ui/icons/Home";
-import { useEffect } from "react";
+
 const Nav = () => {
   const [value, setValue] = useState(0);
 

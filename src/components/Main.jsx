@@ -2,12 +2,11 @@ import { useEffect, useCallback, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { ErrorsContext } from "../contexts/ErrorsContext";
-import Global from "../pages/Global";
-import Countries from "../pages/Countries";
+import { Global, Countries } from "../pages";
 import Axios from "axios";
 import Nav from "./Nav";
-import Loading from "./Loading";
 import Error from "./Error";
+import Loading from "./Loading";
 const Main = () => {
   const { global, setGlobal, countries, setCountries } =
     useContext(GlobalContext);

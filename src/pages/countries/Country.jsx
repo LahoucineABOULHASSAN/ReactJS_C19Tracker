@@ -6,8 +6,10 @@ import {
   Grid,
   Avatar,
 } from "@material-ui/core";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStyles } from "../../hooks/useStyles";
+
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
 const Country = ({ country }) => {
   const classes = useStyles();
 

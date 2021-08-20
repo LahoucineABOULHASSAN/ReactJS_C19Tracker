@@ -1,11 +1,9 @@
-import "./App.css";
-import Main from "./components/Main";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ErrorsContextProvider from "./contexts/ErrorsContext";
-import GlobalContextProvider from "./contexts/GlobalContext";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import { red, deepPurple } from "@material-ui/core/colors";
+import { Main, Header, Footer } from "./components";
+
+import ErrorsContextProvider from "./contexts/ErrorsContext";
+import GlobalContextProvider from "./contexts/GlobalContext";
 
 function App() {
   const theme = createTheme({

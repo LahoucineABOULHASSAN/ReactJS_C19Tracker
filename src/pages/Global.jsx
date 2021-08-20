@@ -1,6 +1,7 @@
-import { Container, Grid, Typography } from "@material-ui/core";
-import Result from "../components/Result";
+import { Result } from "../components";
 import { useStyles } from "../hooks/useStyles";
+import { Container, Grid, Typography } from "@material-ui/core";
+
 const Global = ({ global }) => {
   const classes = useStyles();
 

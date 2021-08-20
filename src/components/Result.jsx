@@ -1,6 +1,5 @@
-import { Typography, makeStyles } from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
 import { getBG } from "../utilities/getBG";
+import { Typography, Paper, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   paper: {

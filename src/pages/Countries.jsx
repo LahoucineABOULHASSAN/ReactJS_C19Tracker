@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useStyles } from "../hooks/useStyles";
 import { GlobalContext } from "../contexts/GlobalContext";
-import SearchForm from "../components/SearchForm";
-import Country from "./countries/Country";
 import { Container, Typography } from "@material-ui/core";
+import { SearchForm } from "../components";
+import Country from "./countries/Country";
 
 const Countries = ({ countries }) => {
   const { search, setSearch } = useContext(GlobalContext);

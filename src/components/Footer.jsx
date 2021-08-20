@@ -1,5 +1,5 @@
-import { Container, Typography, Link } from "@material-ui/core";
 import { useStyles } from "../hooks/useStyles";
+import { Container, Typography, Link } from "@material-ui/core";
 
 const Footer = () => {
   const classes = useStyles();

@@ -2,6 +2,7 @@ import { TextField, IconButton, InputAdornment } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import { useStyles } from "../hooks/useStyles";
 import SearchIcon from "@material-ui/icons/Search";
+
 const SearchForm = ({ handleFilter, countries }) => {
   const classes = useStyles();
 
