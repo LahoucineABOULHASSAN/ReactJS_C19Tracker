@@ -24,7 +24,7 @@ const Country = ({ country }) => {
       </Typography>
       <Typography variant="h6" className={classes.marginingB}>
         {" "}
-        Global:{" "}
+        Total:{" "}
       </Typography>
     </div>
   );
@@ -40,7 +40,7 @@ const Country = ({ country }) => {
         </Typography>
       </div>
       <div>
-        <span className="unhide">Global: </span>
+        <span className="unhide">Total: </span>
         <Typography variant="h6" className={classes.marginingB}>
           {country.TotalRecovered.toLocaleString()}
         </Typography>
@@ -59,7 +59,7 @@ const Country = ({ country }) => {
         </Typography>
       </div>
       <div>
-        <span className="unhide">Global: </span>
+        <span className="unhide">Total: </span>
         <Typography variant="h6" className={classes.marginingB}>
           {country.TotalConfirmed.toLocaleString()}
         </Typography>
@@ -78,7 +78,7 @@ const Country = ({ country }) => {
         </Typography>
       </div>
       <div>
-        <span className="unhide">Global: </span>
+        <span className="unhide">Total: </span>
         <Typography variant="h6" className={classes.marginingB}>
           {country.TotalDeaths.toLocaleString()}
         </Typography>
