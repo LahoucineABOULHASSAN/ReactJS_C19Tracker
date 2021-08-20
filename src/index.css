@@ -1,81 +1,59 @@
-:root {
-  --primary: #fcb742;
-  --secondary: #008a63;
-  --green: #7efcbdd2;
-  --red: #fc7eaed2;
-  --blue: #08aac7;
-  --yellow: #fcf486a9;
-  --dark: #202020;
-  --light: #cacaca;
-}
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.8s ease-in-out;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: monospace;
+  color: #fefefe;
 }
-.App {
-  min-height: 100vh;
-  height: auto;
+h2.heading {
+  margin-bottom: 2rem;
 }
 main {
   max-width: 1920px;
-  width: 80%;
+  width: 90%;
+  padding: 1rem 0 4rem 0;
   margin: 0 auto;
 }
-/* App */
-.App {
-  background: var(--light);
+.elem-country:nth-child(8n + 0) .avatar-country {
+  background: #f44336;
 }
-section,
-header,
-footer {
-  width: 100%;
-  height: auto;
-  padding: 4rem;
+.elem-country:nth-child(8n + 1) .avatar-country {
+  background: #388e3c;
 }
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 1rem;
+.elem-country:nth-child(8n + 2) .avatar-country {
+  background: #a44fbb;
 }
-a {
-  text-decoration: none;
+.elem-country:nth-child(8n + 3) .avatar-country {
+  background: #ffa726;
 }
-p {
-  font-size: 1rem;
+.elem-country:nth-child(8n + 4) .avatar-country {
+  background: #795548;
 }
-/* classes */
-.grid {
-  display: grid;
-  grid-gap: 1rem;
+.elem-country:nth-child(8n + 5) .avatar-country {
+  background: #26c6da;
 }
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+.elem-country:nth-child(8n + 6) .avatar-country {
+  background: #f06292;
 }
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
+.elem-country:nth-child(8n + 7) .avatar-country {
+  background: #546e7a;
 }
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.flex-row {
-  flex-direction: row;
-  justify-content: space-between;
-}
-.flex-column {
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 .unhide {
   display: none;
+}
+@media screen and (max-width: 600px) {
+  span.unhide {
+    display: block;
+  }
+  .unhide-2 {
+    display: none;
+  }
 }

@@ -2,16 +2,14 @@ import { useEffect, useCallback, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { ErrorsContext } from "../contexts/ErrorsContext";
-import Global from "../pages/Global";
-import Countries from "../pages/Countries";
+import { Global, Countries } from "../pages";
 import Axios from "axios";
 import Nav from "./Nav";
-import Loading from "./Loading";
 import Error from "./Error";
+import Loading from "./Loading";
 const Main = () => {
-  const { global, setGlobal, countries, setCountries } = useContext(
-    GlobalContext
-  );
+  const { global, setGlobal, countries, setCountries } =
+    useContext(GlobalContext);
   const { errors, setErrors } = useContext(ErrorsContext);
   const fetchResults = useCallback(() => {
     const url = "https://api.covid19api.com/summary";
@@ -37,7 +35,7 @@ const Main = () => {
   const renderGlobal = () => {
     if (global.Date) {
       return (
-        <Route exact path="/" component={Global}>
+        <Route exact path="/">
           <Global global={global} />
         </Route>
       );
@@ -49,7 +47,7 @@ const Main = () => {
   const renderCountries = () => {
     if (countries.length) {
       return (
-        <Route path="/countries" component={Countries}>
+        <Route path="/countries">
           <Countries
             countries={countries.sort(
               (a, b) => b.NewConfirmed - a.NewConfirmed

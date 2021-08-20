@@ -1,25 +1,33 @@
+import { useStyles } from "../hooks/useStyles";
+import { Container, Typography, Link } from "@material-ui/core";
+
 const Footer = () => {
+  const classes = useStyles();
   return (
-    <footer className="flex flex-column">
-      <p>
+    <Container className={classes.container}>
+      <Typography className={classes.link} align="center">
         API from{" "}
-        <a href="https://covid19api.com" target="_blank" rel="noreferrer">
+        <Link href="https://covid19api.com" target="_blank" rel="noreferrer">
           covid19api.com
-        </a>
-      </p>
-      <p>
-        Copyright &copy; {new Date().getFullYear()} ||
-        <span>
-          <a
-            href="https://aboulhassan.netlify.app/"
+        </Link>
+      </Typography>
+      <Typography
+        className={classes.spacing + " " + classes.link}
+        align="center"
+      >
+        Copyright &copy; {new Date().getFullYear()}
+        <span> || </span>
+        <strong>
+          <Link
+            href="https://aboulhassan.netlify.app"
             target="_blank"
             rel="noreferrer"
           >
             Lahoucine Aboulhassan
-          </a>
-        </span>
-      </p>
-    </footer>
+          </Link>
+        </strong>
+      </Typography>
+    </Container>
   );
 };
 
