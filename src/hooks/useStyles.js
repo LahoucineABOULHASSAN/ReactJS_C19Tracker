@@ -41,8 +41,7 @@ export const useStyles = makeStyles((theme) => {
     form: {
       display: "flex",
       alignItems: "center",
-      minWidth: 400,
-      width: "75%",
+      width: "90%",
       margin: "0 auto",
     },
     iconButton: {
