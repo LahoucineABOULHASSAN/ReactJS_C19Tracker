@@ -28,7 +28,6 @@ const Nav = () => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    console.log(newValue);
   };
   useEffect(
     () => setValue(location.pathname === "/" ? 0 : 1),
